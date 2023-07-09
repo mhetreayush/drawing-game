@@ -39,9 +39,9 @@ const Page: FC<pageProps> = ({}) => {
             position: "absolute",
             top: currentCoords?.clientY,
             left: currentCoords?.clientX,
-
-            padding: width + "px",
-            zIndex: "-1",
+            pointerEvents: "none",
+            padding: width / 2 + "px",
+            zIndex: "1",
             backgroundColor: color,
           }}
           className="rounded-full bg-black transform translate-x-[-50%] translate-y-[-50%]"
