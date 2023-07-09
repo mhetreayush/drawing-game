@@ -25,7 +25,6 @@ const Page: FC<pageProps> = ({}) => {
 
     socket.emit("client-ready");
     socket.on("new-user-connected", (userId) => {
-      console.log(userId + " connected");
       toast.success(userId + " connected");
     });
     socket.on("get-canvas-state", () => {
