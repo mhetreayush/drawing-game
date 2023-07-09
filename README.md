@@ -1,6 +1,10 @@
 # Drawing App
 
-A simple drawing app made using React.js, Next.js and HTML Canvas element.
+<p align="center">
+  <img src="https://media.tenor.com/lZtboTIiaWMAAAAM/drawing.gif" />
+</p>
+
+A simple drawing app made using **React.js, Next.js and HTML Canvas element**.
 
 ## Demo
 
@@ -9,7 +13,10 @@ A simple drawing app made using React.js, Next.js and HTML Canvas element.
 ## Video references:
 
 - 🤩🤩 Pick a color & start drawing.
-  ![Image1](https://s11.gifyu.com/images/SWNwM.gif)
-
+  <p align="center">
+    <img src="https://s11.gifyu.com/images/SWNwM.gif" />
+  </p>
 - 🎨🎨 Clear, change brush size and alpha settings.
-  ![Image1](https://s11.gifyu.com/images/SWNwp.gif)
+    <p align="center">
+    <img src="https://s11.gifyu.com/images/SWNwp.gif" />
+  </p>
