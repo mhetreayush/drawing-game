@@ -7,7 +7,7 @@
 A simple drawing app made using **React.js, Next.js and HTML Canvas element**.
 
 ## Demo
-
+**The app is multiplayer**
 [🔗🔗Play now!](https://drawing-game.vercel.app/)
 
 ## Video references:
