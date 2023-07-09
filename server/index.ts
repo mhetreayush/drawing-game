@@ -48,8 +48,8 @@ io.on("connection", (socket) => {
   });
 });
 
-server.get("/", (req, res) => {
-  res.send("<h1>Backend is running</h1>");
+app.get("/", (req: any, res: any) => {
+  res.send("Hello World!");
 });
 
 const PORT = process.env.PORT || 3001;
