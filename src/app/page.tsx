@@ -3,6 +3,7 @@
 import { useDraw } from "@/hooks/useDraw";
 import { FC, useState } from "react";
 import { ChromePicker } from "react-color";
+import rgbHex from "rgb-hex";
 
 interface pageProps {}
 
@@ -46,7 +47,12 @@ const Page: FC<pageProps> = ({}) => {
           }}
           className="rounded-full bg-black transform translate-x-[-50%] translate-y-[-50%]"
         />
-        <ChromePicker color={color} onChange={(e) => setColor(e.hex)} />
+        <ChromePicker
+          color={color}
+          onChange={(e) =>
+            setColor("#" + rgbHex(e.rgb.r, e.rgb.g, e.rgb.b, e.rgb.a))
+          }
+        />
         <button onClick={clear}>Clear</button>
         <div className="flex gap-x-4">
           {[4, 8, 16, 32].map((widthOption) => (
