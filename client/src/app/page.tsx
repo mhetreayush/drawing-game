@@ -6,7 +6,7 @@ import { ChromePicker } from "react-color";
 import rgbHex from "rgb-hex";
 import { io } from "socket.io-client";
 import { drawLine } from "../../utils/drawLine";
-const socket = io("http://localhost:3001");
+const socket = io(process.env.NEXT_PUBLIC_SERVER_URL!);
 interface pageProps {}
 type DrawLineProps = {
   prevPoint: Point | null;
