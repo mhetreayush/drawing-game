@@ -6,6 +6,7 @@ import { ChromePicker } from "react-color";
 import rgbHex from "rgb-hex";
 import { io } from "socket.io-client";
 import { drawLine } from "../../utils/drawLine";
+import { toast } from "react-toastify";
 const socket = io(process.env.NEXT_PUBLIC_SERVER_URL!);
 interface pageProps {}
 type DrawLineProps = {
@@ -23,7 +24,10 @@ const Page: FC<pageProps> = ({}) => {
     const ctx = canvasRef.current?.getContext("2d");
 
     socket.emit("client-ready");
-
+    socket.on("new-user-connected", (userId) => {
+      console.log(userId + " connected");
+      toast.success(userId + " connected");
+    });
     socket.on("get-canvas-state", () => {
       if (!canvasRef.current?.toDataURL()) return;
       socket.emit("canvas-state", canvasRef.current.toDataURL());

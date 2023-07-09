@@ -22,6 +22,7 @@ type DrawLine = {
 
 io.on("connection", (socket) => {
   console.log("connection");
+  socket.broadcast.emit("new-user-connected", socket.id);
   socket.on(
     "draw-line",
     ({ prevPoint, currentPoint, color, width }: DrawLine) => {
