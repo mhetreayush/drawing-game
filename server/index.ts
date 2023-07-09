@@ -48,6 +48,10 @@ io.on("connection", (socket) => {
   });
 });
 
+server.get("/", (req, res) => {
+  res.send("<h1>Backend is running</h1>");
+});
+
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => {
   console.log(`listening on *:${PORT}`);
